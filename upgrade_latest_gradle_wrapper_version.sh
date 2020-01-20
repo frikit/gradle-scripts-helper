@@ -1,7 +1,10 @@
 #!/bin/sh
 
 curr=${PDW}
-cd ../
+src=$(dirname "${PWD}")
+
+if [ -d "$src/src" ]; then
+  cd ${src}
 
 echo Make gradlew executable
 chmod +x gradlew
@@ -29,3 +32,7 @@ echo Upgrade gradle version to ${latest_version}
 ./gradlew wrapper --gradle-version ${latest_version} --distribution-type=${type} --warning-mode=ALL
 
 cd ${curr}
+
+else
+    echo "Can't find src folder(root) in parent to run gradle command! This script suppose to be in scripts folder"
+fi
