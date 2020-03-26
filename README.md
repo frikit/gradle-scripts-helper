@@ -8,4 +8,4 @@ tasks/methods, which help to solve a specific piece of problem
 
 # Contribution
 You can contribute with your scripts, but we need to keep document each script to help other to find these scripts easier
-also comment as much line of script code as you want/can
+also comment as many lines of script code as you can
